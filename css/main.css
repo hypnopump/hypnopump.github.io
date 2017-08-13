@@ -1,6 +1,6 @@
 html, body{
 	text-align: center;
-	background-color:#F1F1F1;
+	/*background-color:#F1F1F1;*/
 }
 
 html{
@@ -28,10 +28,10 @@ button{
 	font-size:1.2em;
 	width:95%;
 	max-width:46em;
-	border-style:solid;
+	/*border-style:solid;
     border-color:#828282;
     border-width:1px;
-    background-color:#FFFFFF;
+    background-color:#FFFFFF;*/
 }
 
 @media (max-width: 350px) {
