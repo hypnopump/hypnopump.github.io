@@ -17,10 +17,24 @@ button{
     border-width:1px;
 }
 
+.header{
+	width:95%;
+	max-width:46em;
+}
+
+
+.centered_short{
+	margin-right:auto;
+	margin-left:auto;
+	width:95%;
+	max-width:40rem;
+}
+
+
 .container{
-	margin-top: 5rem;
+	margin-top: 3.5rem;
 	margin-bottom: 5rem;
-	padding-top:5%;
+	padding-top:3.5%;
 	padding-bottom:5%;
 	border:2px #585858;
 	border-radius:1em;
@@ -79,4 +93,8 @@ button{
 .bio{
 	padding-left:2rem;
 	padding-right:2rem;
+}
+
+.black{
+	font-color:black;
 }
