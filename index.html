@@ -8,35 +8,59 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 		<link rel="icon" href="imgs/e.png" type="image/png">
 
-		<!-- Bootstrap Core CSS -->
-    	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-
+		<!-- Milligram Core CSS -->
+    	<link href="css/milligram.min.css" rel="stylesheet" type="text/css">
     	<!-- Custom Fonts -->
     	<link href="css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    	<!-- My own stuff -->
     	<link href="css/main.css" rel="stylesheet" type="text/css">
+    	<script src="js/animations.js" type="text/javascript"></script>
     	<title>Eric Alcaide</title>
 	</head>
 
 	<body>
-		<div class="container">
+		<div class="my_container">
+			<!-- HEADER -->
+
 			<div class="header">
 				<img src="https://pbs.twimg.com/profile_images/1071062735058817028/NfN2E2mD_400x400.jpg" class="top_image z-depth-1">
 				<h2 class="my_name">Eric Alcaide</h2>
 
+				<p>
+					<a id="bio-button" onclick="changeSection('bio')" class="button button-black">Intro</a>
+					<a id="hiring-button" onclick="changeSection('hiring')" class="button button-black button-outline">Programming & AI Classes</a>
+					<a id="publications-button" onclick="changeSection('publications')" class="button button-black button-outline">Publications</a>
+				</p>
+			</div>
+
+
+			<!-- MAIN SECTION -->
+
+			<div class="bio">
 				<p class="centered_short">I'm a <b>Medicine Student</b> also passionate about computers, mostly <b>Machine Learning</b> and general <b>Programming</b>.</p>
 
 				<p>I solve problems. Do you have one?</p>
 
-				<p><a href="mailto:ericalcaide1@gmail.com" class="contact"><button class="email-button">Contact me</button></a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://drive.google.com/file/d/1mK8H4_ueTnCJoNAGzEK2tO8O5lBDwRS8/view?usp=sharing" class="contact"><button class="email-button">CV</button></a></p>
+				<p><a href="mailto:ericalcaide1@gmail.com" class="button button-black">Contact me</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="https://drive.google.com/file/d/1mK8H4_ueTnCJoNAGzEK2tO8O5lBDwRS8/view?usp=sharing" class="button button-black">CV</a></p>
 			</div>
-			<hr>
-			<div class="bio">
+			<div class="hiring" style="display:none;">
+				<h2 class="my_name">Programming & AI Classes</h2>
+				<p>I am a programming and AI instructor with 3+ years as expert in the field.
+				I also provide strategic advice and consultancy on projects related to AI, Machine Learning, Data and/or statistics.</p>
+				<p><a href="mailto:ericalcaide1@gmail.com" class="button button-black">Contact me</a></p>
+				
+			</div>
+			<div class="publications" style="display:none;">
 				<h2 class="my_name">Publications</h2>
 				<p><a href="https://arxiv.org/pdf/1801.07145.pdf">E-swish: Adjusting Activations to Different Network Depths</a></p>
 				<p><a href="https://drive.google.com/file/d/1dXKDoy0-rfDVdWjkVFQzN9hxfXd2Vvwj/view">Deep Learning - Can computers learn?</a></p>
 				
 			</div>
+
+
+
+			<!-- FOOTER -->
 			<hr>
 			<div class="social" style="">
 				<a href="https://www.linkedin.com/in/ericalcaide/" class="btn fa-2x btn-social-icon btn-lg btn-linkedin" style="border-width:1px" target="_blank"><span class="fa fa-linkedin"></span></a>

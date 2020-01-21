@@ -17,21 +17,9 @@ button{
     border-width:1px;
 }
 
-.header{
-	width:95%;
-	max-width:46em;
-}
-
-
-.centered_short{
-	margin-right:auto;
-	margin-left:auto;
-	width:95%;
-	max-width:40rem;
-}
-
-
-.container{
+.my_container{
+	margin-left: auto;
+	margin-right: auto;
 	margin-top: 3.5rem;
 	margin-bottom: 5rem;
 	padding-top:3.5%;
@@ -48,6 +36,28 @@ button{
     background-color:#FFFFFF;*/
 }
 
+.header{
+	margin-right:auto;
+	margin-left:auto;
+	width:95%;
+	max-width:46em;
+}
+
+
+.centered_short{
+	margin-right:auto;
+	margin-left:auto;
+	width:95%;
+	max-width:35em;
+}
+
+
+.bio{
+	padding-left:2rem;
+	padding-right:2rem;
+}
+
+
 @media (max-width: 350px) {
 	.top_image{
 		width:10rem;
@@ -62,39 +72,45 @@ button{
 	width:20rem;
 	border-radius:50%;
 	border:1px solid #eee;
-	margin-bottom:0.5rem;
+	margin-bottom:1.5rem;
 }
 
 .top_image:hover{
 	box-shadow: 0rem 0rem 5rem #A1A1A1;
 }
 
-.contact{
-	color:black;
-	border:2.5px #575757;
-}
 
-.contact:hover{
-	text-decoration:none;
-	color:black;
-}
 
-.email-button{
-	padding:1rem 1.5rem 1rem 1.5rem;
-	border-radius:0.5em;
-	border-5px 
-	border-color:#000000;
-}
+/* FOOTER */
 
 .social{
 	font-size:1.5em;
 }
 
-.bio{
-	padding-left:2rem;
-	padding-right:2rem;
+.fa{
+	margin-left: 1%;
+	margin-right: 1%;
 }
 
-.black{
-	font-color:black;
+
+/* DELETIONS */
+/* a{
+  	color:#9b4dca;
+  } */ 
+
+
+
+/* EXTENSIONS */
+
+.button-black {
+  background-color: black;
+  border-color: black;
 }
+.button-black.button-clear,
+.button-black.button-outline {
+  background-color: transparent;
+  color: black;
+}
+.button-black.button-clear {
+  border-color: transparent;
+} 
