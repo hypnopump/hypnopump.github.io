@@ -11,6 +11,10 @@ p{
 	padding-top:1em;
 }
 
+a{
+	color:#0077cc;
+}
+
 button{
     border-style:solid;
     border-color:#828282;
@@ -41,6 +45,7 @@ button{
 	margin-left:auto;
 	width:95%;
 	max-width:46em;
+	margin-bottom:1em;
 }
 
 
@@ -77,6 +82,10 @@ button{
 
 .top_image:hover{
 	box-shadow: 0rem 0rem 5rem #A1A1A1;
+}
+
+.my_name{
+	margin-bottom: 1em;
 }
 
 
