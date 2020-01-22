@@ -49,6 +49,13 @@ button{
 }
 
 
+.navbar-item{
+	width:90%;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+
 .centered_short{
 	margin-right:auto;
 	margin-left:auto;
