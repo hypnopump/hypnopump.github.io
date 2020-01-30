@@ -21,6 +21,13 @@ button{
     border-width:1px;
 }
 
+.profile-picture{
+	max-width: 20rem;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 .my_container{
 	margin-left: auto;
 	margin-right: auto;
