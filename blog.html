@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog - Eric Alcaide</title>
+    <link rel="icon" href="imgs/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Eric Alcaide</a>
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="publications.html">Publications</a>
+                <a href="Eric_Alcaide_CV_Resume.pdf" target="_blank">CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <h1>Blog</h1>
+        <div id="blog-list">
+            <p class="muted">Loading posts...</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eric Alcaide</p>
+    </footer>
+
+    <script>
+    // Blog posts registry — add new posts here
+    // Each entry: { slug: "filename-without-md", title: "...", date: "YYYY-MM-DD", description: "..." }
+    const POSTS = [];
+
+    function renderBlogList() {
+        const container = document.getElementById('blog-list');
+        if (POSTS.length === 0) {
+            container.innerHTML = '<p class="muted">No entries yet</p>';
+            return;
+        }
+        // Sort by date descending
+        const sorted = POSTS.slice().sort((a, b) => b.date.localeCompare(a.date));
+        let html = '<table class="news-table">';
+        for (const post of sorted) {
+            html += `<tr>
+                <td class="news-date">${post.date}</td>
+                <td><a href="post.html?slug=${post.slug}">${post.title}</a><br><span class="muted">${post.description}</span></td>
+            </tr>`;
+        }
+        html += '</table>';
+        container.innerHTML = html;
+    }
+
+    renderBlogList();
+    </script>
+</body>
+</html>

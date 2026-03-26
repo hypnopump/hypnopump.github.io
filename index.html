@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Eric Alcaide">
+    <meta name="description" content="Eric Alcaide - Researcher working on LLMs, Coding Agents, and AI for Science.">
+    <meta name="robots" content="index, follow">
+    <link rel="icon" href="imgs/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="imgs/e.png">
+    <title>Eric Alcaide</title>
+    <link rel="stylesheet" href="css/site.css">
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- NAV -->
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Eric Alcaide</a>
+            <div class="nav-links">
+                <a href="index.html" class="active">About</a>
+                <a href="blog.html">Blog</a>
+                <a href="publications.html">Publications</a>
+                <a href="Eric_Alcaide_CV_Resume.pdf" target="_blank">CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN -->
+    <main>
+        <div class="about-grid">
+            <div class="about-text">
+                <h1>Eric Alcaide</h1>
+                <p class="bio">
+                    I'm a researcher working on <strong>LLMs</strong>, coding agents, and <strong>AI4Science</strong>.
+                </p>
+                <p class="bio">My current research interests focus on:</p>
+                <ul class="bio-list">
+                    <li>Efficient processing of information with Recurrent Neural Networks</li>
+                    <li>Adaptive computation &amp; reasoning</li>
+                    <li>Agents and LLMs for code</li>
+                    <li>AI for Science and BioTech (3D, design, automation)</li>
+                </ul>
+                <p class="bio">
+                    Previously, I was one of the pioneers of <strong>CoFolding</strong> early in 2021
+                    as the first member of <a href="https://charmtx.com">CHARM Tx</a>,
+                    and worked on ML for structural biology at <a href="https://www.vir.bio/">Vir Biotechnology</a>.
+                    I am also an open source researcher at <a href="https://www.eleuther.ai/">EleutherAI</a>,
+                    where I led efforts on Linear Attention (author of <a href="https://arxiv.org/abs/2305.13048">RWKV</a>) and AI for Science - <a href="https://www.openbioml.org/">OpenBioML</a> community.
+                </p>
+                <p class="bio">
+                    I hold a Physics degree and a Medicine degree (MD) from the University of Barcelona.
+                    My medical thesis, <em>"Towards immune profiling of brain metastasis from lung cancer
+                    as a driver for precision medicine"</em>, was supervised by
+                    <a href="https://www.linkedin.com/in/ernest-nadal-9832975b/">Ernest Nadal Alforja, MD, PhD</a>
+                    at the <a href="https://ico.gencat.cat">Catalan Institute of Oncology</a>.
+                </p>
+            </div>
+            <div class="about-photo">
+                <img src="imgs/profile.jpg" alt="Eric Alcaide">
+                <p class="photo-email">ericalcaide1 [at] gmail [dot] com</p>
+                <div class="social-icons">
+                    <a href="https://github.com/hypnopump" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://twitter.com/eric_alcaide" target="_blank" title="X / Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.linkedin.com/in/ericalcaide/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <!-- NEWS: add new entries at the top, only the first 3 will be shown -->
+        <section class="news">
+            <h2>News</h2>
+            <ul class="news-list" id="news-list">
+                <li><span class="news-date">Jan 2026</span>- &nbsp; <a href="https://openreview.net/forum?id=Ch0MxMvNHz">Multiple Token Divergence</a> accepted at ICLR 2026 &mdash; See you in Rio!</li>
+                <li><span class="news-date">Dec 2025</span>- &nbsp; Around for NeurIPS2025 in San Diego. Let's chat!</li>
+            </ul>
+        </section>
+        <script>
+            (function() {
+                var items = document.querySelectorAll('#news-list li');
+                for (var i = 3; i < items.length; i++) items[i].style.display = 'none';
+            })();
+        </script>
+
+        <!-- SELECTED PUBLICATIONS -->
+        <section class="selected-pubs">
+            <h2>Selected Publications</h2>
+            <div class="pub-list">
+
+                <div class="pub">
+                    <span class="pub-venue">ICLR 2026</span>
+                    <p class="pub-title">Multiple Token Divergence: Measuring and Steering In-Context Computation Density</p>
+                    <p class="pub-authors">Vincent Herrmann*, <strong>Eric Alcaide*</strong>, Michael Wand, Jürgen Schmidhuber</p>
+                    <p class="pub-links">
+                        <a href="https://openreview.net/forum?id=Ch0MxMvNHz">OpenReview</a>
+                        <a href="https://arxiv.org/abs/2512.22944">arXiv</a>
+                    </p>
+                </div>
+
+                <div class="pub">
+                    <span class="pub-venue">CoLM 2025</span>
+                    <p class="pub-title">RWKV-7 "Goose" with Expressive Dynamic State Evolution</p>
+                    <p class="pub-authors">Bo Peng, Daniel Goldstein, <strong>Eric Alcaide</strong>, et al.</p>
+                    <p class="pub-links">
+                        <a href="https://arxiv.org/abs/2503.14456">arXiv</a>
+                    </p>
+                </div>
+
+                <div class="pub">
+                    <span class="pub-venue">CoLM 2025</span>
+                    <p class="pub-title">RADLADS: Rapid Attention Distillation to Linear Attention Decoders at Scale</p>
+                    <p class="pub-authors">Daniel Goldstein, <strong>Eric Alcaide</strong>, Janna Lu, Eugene Cheah</p>
+                    <p class="pub-links">
+                        <a href="https://arxiv.org/abs/2505.03005">arXiv</a>
+                        <a href="https://github.com/recursal/RADLADS-paper">Code</a>
+                    </p>
+                </div>
+
+                <div class="pub">
+                    <span class="pub-venue">EMNLP 2023</span>
+                    <p class="pub-title">RWKV: Reinventing RNNs for the Transformer Era</p>
+                    <p class="pub-authors">Bo Peng*, <strong>Eric Alcaide*</strong>, Quentin Anthony, et al.</p>
+                    <p class="pub-links">
+                        <a href="https://arxiv.org/abs/2305.13048">arXiv</a>
+                    </p>
+                </div>
+
+            </div>
+            <p style="margin-top: 1rem;"><a href="publications.html">See all publications &rarr;</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eric Alcaide</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Post - Eric Alcaide</title>
+    <link rel="icon" href="imgs/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- marked.js for markdown rendering -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <!-- highlight.js for code syntax highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/github.min.css">
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+    <!-- KaTeX for LaTeX rendering -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+</head>
+<body>
+    <nav>
+        <div class="nav-inner">
+            <a href="index.html" class="nav-name">Eric Alcaide</a>
+            <div class="nav-links">
+                <a href="index.html">About</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="publications.html">Publications</a>
+                <a href="Eric_Alcaide_CV_Resume.pdf" target="_blank">CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <article id="post-content">
+            <p class="muted">Loading...</p>
+        </article>
+        <p style="margin-top: 3rem;"><a href="blog.html">&larr; Back to blog</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Eric Alcaide</p>
+    </footer>
+
+    <script>
+    async function loadPost() {
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get('slug');
+        if (!slug) {
+            document.getElementById('post-content').innerHTML = '<p>Post not found.</p>';
+            return;
+        }
+        try {
+            const resp = await fetch(`blog/${slug}.md`);
+            if (!resp.ok) throw new Error('Not found');
+            const md = await resp.text();
+            document.getElementById('post-content').innerHTML = marked.parse(md);
+            // Syntax highlight code blocks
+            document.querySelectorAll('#post-content pre code').forEach(el => hljs.highlightElement(el));
+            // Render LaTeX: $...$ for inline, $$...$$ for block
+            renderMathInElement(document.getElementById('post-content'), {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ],
+                throwOnError: false
+            });
+            // Set title from first h1 if present
+            const h1 = document.querySelector('#post-content h1');
+            if (h1) document.title = h1.textContent + ' - Eric Alcaide';
+        } catch (e) {
+            document.getElementById('post-content').innerHTML = '<p>Post not found.</p>';
+        }
+    }
+    loadPost();
+    </script>
+</body>
+</html>

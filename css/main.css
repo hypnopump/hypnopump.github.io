@@ -1,0 +1,145 @@
+html, body{
+	text-align: center;
+	/*background-color:#F1F1F1;*/
+}
+
+html{
+	height:100%;
+}
+
+p{
+	padding-top:1em;
+}
+
+a{
+	color:#0077cc;
+}
+
+button{
+    border-style:solid;
+    border-color:#828282;
+    border-width:1px;
+}
+
+.profile-picture{
+	max-width: 20rem;
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.my_container{
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 3.5rem;
+	margin-bottom: 5rem;
+	padding-top:3.5%;
+	padding-bottom:5%;
+	border:2px #585858;
+	border-radius:1em;
+	line-height: 1.5em;
+	font-size:1.2em;
+	width:95%;
+	max-width:46em;
+	/*border-style:solid;
+    border-color:#828282;
+    border-width:1px;
+    background-color:#FFFFFF;*/
+}
+
+.header{
+	margin-right:auto;
+	margin-left:auto;
+	width:95%;
+	max-width:46em;
+	margin-bottom:1em;
+}
+
+
+.navbar-item{
+	width:90%;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+
+.centered_short{
+	margin-right:auto;
+	margin-left:auto;
+	width:95%;
+	max-width:35em;
+}
+
+
+.bio{
+	padding-left:2rem;
+	padding-right:2rem;
+}
+
+
+@media (max-width: 350px) {
+	.top_image{
+		width:10rem;
+		height:10rem;
+	}
+}
+
+.top_image{
+	max-width:80%;
+	max-height:40%;
+	height:20rem;
+	width:20rem;
+	border-radius:50%;
+	border:1px solid #eee;
+	margin-bottom:1.5rem;
+}
+
+.top_image:hover{
+	box-shadow: 0rem 0rem 5rem #A1A1A1;
+}
+
+.my_name{
+	margin-bottom: 1em;
+}
+
+
+.map_widget{
+    margin-right:auto;
+	margin-left:auto;
+	width:30%;
+}
+
+
+/* FOOTER */
+
+.social{
+	font-size:1.5em;
+}
+
+.fa{
+	margin-left: 1%;
+	margin-right: 1%;
+}
+
+
+/* DELETIONS */
+/* a{
+  	color:#9b4dca;
+  } */ 
+
+
+
+/* EXTENSIONS */
+
+.button-black {
+  background-color: black;
+  border-color: black;
+}
+.button-black.button-clear,
+.button-black.button-outline {
+  background-color: transparent;
+  color: black;
+}
+.button-black.button-clear {
+  border-color: transparent;
+} 
