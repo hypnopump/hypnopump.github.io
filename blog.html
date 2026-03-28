@@ -35,7 +35,9 @@
     <script>
     // Blog posts registry — add new posts here
     // Each entry: { slug: "filename-without-md", title: "...", date: "YYYY-MM-DD", description: "..." }
-    const POSTS = [];
+    const POSTS = [
+        { slug: "accelerating-gdn-inference", title: "Accelerating GatedDeltaNet Inference by 1.15x", date: "2026-03-28", description: "How we sped up Gated DeltaNet forward pass with a similarity-transform trick and kernel fusion." }
+    ];
 
     function renderBlogList() {
         const container = document.getElementById('blog-list');
