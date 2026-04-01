@@ -5,7 +5,7 @@ by [Eric Alcaide](/)
 This blogpost describes how we accelerated [Gated DeltaNet](https://arxiv.org/abs/2412.06464) by **1.15x** in the forward pass following [Simon Veitner's blogpost](https://veitner.bearblog.dev/simple-math-to-speed-up-gdn-prefill/). Here's our [PR](https://github.com/fla-org/flash-linear-attention/pull/797). Once it's merged, practitioners will get the speedup by upgrading [FLA](https://github.com/fla-org/flash-linear-attention) version.
 
 <p align="center">
-  <img src="../imgs/gdn_fused_comparison.svg" alt="FLA vs Tricked + Fused Kernels" width="900">
+  <img src="/imgs/gdn_fused_comparison.svg" alt="FLA vs Tricked + Fused Kernels" width="900">
 </p>
 
 **Figure 1**: Execution time comparison of [FLA](https://github.com/fla-org/flash-linear-attention) (commit: [f52529e](https://github.com/fla-org/flash-linear-attention/commit/f52529ee8a7b17f4514fd32dbe22632ed9d55c76)) and our improved version, layered on top of FLA's own fused kernels. Benchmarked on NVIDIA H100.

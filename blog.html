@@ -51,7 +51,7 @@
         for (const post of sorted) {
             html += `<tr>
                 <td class="news-date">${post.date}</td>
-                <td><a href="post.html?slug=${post.slug}">${post.title}</a><br><span class="muted">${post.description}</span></td>
+                <td><a href="blog/${post.slug}/">${post.title}</a><br><span class="muted">${post.description}</span></td>
             </tr>`;
         }
         html += '</table>';
